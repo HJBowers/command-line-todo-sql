@@ -1,0 +1,26 @@
+{
+  "name": "sql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "task.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha ./test/*_test.js",
+    "db:create": "createdb commandline",
+    "db:schema": "psql commandline < ./schema.sql",
+    "db:drop": "dropdb commandline",
+    "db:reset": "npm run db:drop && npm run db:create && npm run db:schema",
+    "test:api": "NODE_ENV=test mocha ./test/tasks_test.js",
+    "test:add": "NODE_ENV=test mocha ./test/queries_test.js",
+    "test:db:create": "createdb commandline_test",
+    "test:db:drop": "dropdb commandline_test",
+    "test:db:schema": "psql commandline_test < ./schema.sql",
+    "test:db:reset": "npm run test:db:drop && npm run test:db:create && npm run test:db:schema"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2",
+    "pg": "^7.0.2"
+  }
+}
