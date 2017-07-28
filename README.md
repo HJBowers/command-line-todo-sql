@@ -3,8 +3,7 @@ Test the functionality of the commandline todos app with unit and integration/be
 
 
 ## Steps:
-- Clean up architecture / refactorings
-REMOVE:  - taskStore.js => manages data store (readFile/writeFile)
+- Clean up architecture / refactoring
 QUERIES:  - commands/ => actions to manipulate tasks
   - tasks.js => primary script / UI
 - Set up isolated test environment
@@ -27,9 +26,15 @@ QUERIES:  - commands/ => actions to manipulate tasks
     $ npm run db:create
     ...
     $ npm run db:schema
+    ...
+    $ npm run test:db:create
+    ...
+    $ npm run test:db:schema
     ```
 4. Reset database:
 
     ```
     $ npm run db:reset
+    ...
+    $ npm run test:db:reset
     ```
